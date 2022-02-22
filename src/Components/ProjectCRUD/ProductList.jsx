@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./ProductItem.css";
 import { ProductItem } from "./ProductItem";
 import { getApiDetails, postApiDetails } from "../Services/apiServices";
 import { Button, Modal } from "react-bootstrap";
+import "./ProductItem.css";
 
 export const ProductList = () => {
   const [title, setTitle] = useState();

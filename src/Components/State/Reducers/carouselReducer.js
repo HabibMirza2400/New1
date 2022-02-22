@@ -33,7 +33,7 @@ export const carouselReducer = (state = initialState, action) => {
   //     return state;
   // }
   // By usning if else
-  console.log(action);
+  // console.log(action);
   if (action.type === "ADD_CAROUSEL") {
     return {
       ...state,

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Card } from "react-bootstrap";
 import { useSelector } from "react-redux";
-import OurMentorsChild from "./OurMentorsChild";
-export const OurMenters = () => {
+// import OurMentorsChild from "./OurMentorsChild";
+const OurMenters = () => {
   const [mentorData, setMentorData] = useState();
   const mentorSelector = useSelector((state) => state.mentorReducer.mentors);
   useEffect(() => {
@@ -31,3 +31,4 @@ export const OurMenters = () => {
     </div>
   );
 };
+export default OurMenters;

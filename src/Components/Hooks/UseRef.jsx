@@ -1,11 +1,15 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 
 const UseRef = () => {
   const inputRef = useRef();
 
   return (
     <div>
-      <input ref={inputRef} type="file" style={{ display: "none" }} />
+      <input
+        ref={inputRef}
+        type="file"
+        style={{ display: "none" }}
+      />
       <br />
       <i
         class="fas fa-upload"

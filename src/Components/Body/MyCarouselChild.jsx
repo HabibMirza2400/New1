@@ -6,22 +6,21 @@ const MyCarouselChild = () => {
   const [carouselDescription, setCarouselDescription] = useState();
   const myDispatch = useDispatch();
   const dispatchHandler = () => {
-    myDispatch({
-      type: "ADD_CAROUSEL",
-      data: { carouselImg, carouselTitle, carouselDescription },
-    })
-  }
-  if (!carouselImg && !carouselTitle && !carouselDescription) {
-    alert("Please Fill Required Value");
-  }
-  else if (!carouselImg) {
-    alert("Please Fill carouselImg")
-  } else if (!carouselTitle) {
-    alert("Please Fill carouselTitle")
-  } else if (!carouselDescription) {
-    alert("Please Fill carouselDescription")
-  } else {
-
+    if (!carouselImg && !carouselTitle && !carouselDescription) {
+      alert("Please Fill Required Value");
+    }
+    else if (!carouselImg) {
+      alert("Please Fill carouselImg")
+    } else if (!carouselTitle) {
+      alert("Please Fill carouselTitle")
+    } else if (!carouselDescription) {
+      alert("Please Fill carouselDescription")
+    } else {
+      myDispatch({
+        type: "ADD_CAROUSEL",
+        data: { carouselImg, carouselTitle, carouselDescription },
+      })
+    }
   }
 
   return (
@@ -44,8 +43,7 @@ const MyCarouselChild = () => {
         className="m-2"
         onChange={(e) => setCarouselDescription(e.target.value)}
       />
-      <button
-      >
+      <button onClick={dispatchHandler}>
         Add Carousel
       </button>
     </div>

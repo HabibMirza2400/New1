@@ -1,31 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { Button } from "react-bootstrap";
+import { Button, Modal } from "react-bootstrap";
 import NavigationChild from "./NavigationChild";
 import MyCarouselChild from "../Body/MyCarouselChild";
 import CourcesChild from "../Body/Cources";
-import OurMentorChild from "../Body/OurMentorChild";
-import { Modal } from "react-bootstrap";
-
+import OurMentorsChild from "../Body/OurMentorsChild";
 import "./Navigation.css";
 
-export const Navigation = () => {
+const Navigation = () => {
   const [navData, setNavData] = useState([]);
   const [show, setShow] = useState(false);
-
-
   const finalResult = useSelector((state) => state.navReducer.navData);
   useEffect(() => {
     setNavData(finalResult);
   }, [finalResult]);
-
-
   return (
     <div>
       <nav>
         {navData.map((elemnets) => {
           return (
-            <a href={elemnets.link} target={elemnets.target}>
+            <a
+              href={elemnets.link}
+              target={elemnets.target}
+              className="myAnchor">
               {elemnets.name}
             </a>
           );
@@ -45,15 +42,15 @@ export const Navigation = () => {
           <h4>Add Courses</h4>
           <CourcesChild />
           <h4>Add Mentors</h4>
-          <OurMentorChild />
-
+          <OurMentorsChild />
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShow(false)} ></Button>
-
+          <Button variant="secondary" onClick={() => setShow(false)} >
+            Close
+          </Button>
         </Modal.Footer>
       </Modal>
-
     </div>
   );
 };
+export default Navigation;

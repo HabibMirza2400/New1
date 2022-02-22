@@ -8,7 +8,7 @@ export const CourcesReducer = (state = initialState, action) => {
   // return state;
 };
 const initialState = {
-  data: [
+  Cources: [
     {
       title: "HTML",
       desc: "HTML, in full hypertext markup language, a formatting system for displaying material retrieved over the Internet. ... HTML markup tags specify document elements such as headings, paragraphs, and tables. They mark up a document for display by a computer program known as a Web browser.      ",

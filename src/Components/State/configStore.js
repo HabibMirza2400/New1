@@ -5,7 +5,7 @@ import { bodyReducer } from "./Reducers/bodyReducer";
 import { testReducer } from "./Reducers/testReducer";
 import { carouselReducer } from "./Reducers/carouselReducer";
 import { mentorReducer } from "./Reducers/mentorReducer";
-import { CourcesReducer } from "../Body/CourcesReducer";
+import { CourcesReducer } from "../State/Reducers/CourcesReducer";
 export const configStore = () => {
   const store = createStore(
     combineReducers({

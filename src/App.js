@@ -6,8 +6,8 @@ import Cources from "./Components/Body/Cources";
 // import PostData from "./Components/API/PostData";
 import MyCarousel from "./Components/Body/MyCarousel";
 // import UseCallBack from "./Components/Hooks/UseCallBack/UseCallBack";
-import { OurMenters } from "./Components/Body/OurMenters";
-import { Navigation } from "./Components/Navigation/Navigation";
+import OurMenters from "./Components/Body/OurMenters";
+import Navigation from "./Components/Navigation/Navigation";
 // import Testing from "./Components/Testing";
 // import { ProductList } from "./Components/ProjectCRUD/ProductList";
 // import FetchingDataFromRedux from "./Components/Redux/FetchingDataFromRedux";
@@ -27,7 +27,7 @@ function App() {
       {/* <FetchingDataFromRedux /> */}
       {/* <UseRef /> */}
       {/* <UseCallBack /> */}
-      {/* <Testing /> */} 
+      {/* <Testing /> */}
       <footer />
     </div>
   );

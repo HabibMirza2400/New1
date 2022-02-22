@@ -6,18 +6,17 @@ const CourcesChild = () => {
     const [image, setImage] = useState();
     const [description, setDescription] = useState();
     const dispatch = useDispatch();
-    const data = {
-        title: title,
-        desc: description,
-        img: image
-
-    }
     const handleDispatch = () => {
-        dispatch({ type: "ADD_COURCES", data })
-    }
+        const data = {
+            title: title,
+            desc: description,
+            img: image
+        };
+        dispatch({ type: "ADD_COURCES", data, });
+
+    };
     return (
         <div>
-            <h1>Dispatch</h1>
             <input
                 type="text"
                 id='html'
@@ -33,7 +32,8 @@ const CourcesChild = () => {
                 id='javascript'
                 className='mt-2'
                 onChange={(e) => setDescription(e.target.value)} />
-            <button onClick={handleDispatch} className='mt-2'>Add Cources</button>
+            <button className="mt-2" onClick={handleDispatch} >
+                Add Cources</button>
         </div>
     );
 };

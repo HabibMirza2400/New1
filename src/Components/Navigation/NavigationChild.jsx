@@ -11,8 +11,7 @@ const NavigationChild = () => {
     const handleAddLink = () => {
         if (!name && !link && !target) {
             alert("Please Fill Required Value");
-        }
-        else if (!name) {
+        } else if (!name) {
             alert("Please Fill Name")
         } else if (!link) {
             alert("Please Fill Link")
@@ -46,7 +45,6 @@ const NavigationChild = () => {
                 onChange={(e) => setTarget(e.target.value)}
             />
             <button onClick={handleAddLink} >Add Link</button>
-            {/* disabled={!name&&!link&&!target} */}
         </div>
     );
 };
